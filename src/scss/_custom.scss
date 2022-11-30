@@ -1,0 +1,229 @@
+.fixed-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 135px;
+    z-index: 10;
+    opacity: 0;
+    display: none;
+
+    @include xs-block() {
+        opacity: 1;
+        display: block;
+    }
+
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        width: 55px;
+        height: 55px;
+        border-radius: 20px;
+
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        & + & {
+            margin-top: 15px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .count {
+            position: absolute;
+            top: -2px;
+            right: -6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            background-color: $color-danger;
+            color: #fff;
+            font-size: 8px;
+            line-height: 7px;
+        }
+    }
+}
+
+.swiper {
+    padding-bottom: 30px;
+
+    &-slide {
+        &-border {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+    }
+
+    &-pagination {
+        bottom: 0 !important;
+
+        &-bullet {
+            &-active {
+                background: $color-text;
+            }
+        }
+    }
+}
+
+.pro-qty {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    .qty-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 60px;
+        transition: $trs;
+        background-color: #f7f7f7;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+
+        &.dec {
+            order: 1;
+            border-radius: 5px 0 0 5px;
+        }
+
+        &.inc {
+            order: 3;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    .qty {
+        box-sizing: border-box;
+        order: 2;
+        width: 100px;
+        height: 60px;
+        margin: 0 1px;
+        padding: 0;
+        border: none;
+        background: #f7f7f7;
+        text-align: center;
+    }
+}
+
+.fancybox-button {
+    top: 52px;
+    right: 17px;
+    opacity: 0.5;
+    width: 42px;
+    height: 42px;
+    transition: $trs;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+
+    &:hover {
+        opacity: 1;
+        color: #000;
+    }
+
+    &--zoom,
+    &--play,
+    &--thumbs {
+        display: none !important;
+    }
+}
+
+.fancybox-infobar,
+.fancybox-navigation {
+    display: none !important;
+}
+
+.table {
+    position: relative;
+    margin-top: 50px;
+
+    @include xs-block() {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        @include xs-block() {
+            flex-direction: column;
+            align-items: center;
+            width: calc(1 / 3 * 100%);
+        }
+
+        & + & {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+            @include xs-block() {
+                margin-top: 0;
+                padding-top: 0;
+                border-top: none;
+            }
+        }
+    }
+
+    &__item {
+        flex: 1;
+
+        font-family: $f-medium;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 120%;
+        text-align: center;
+
+        @include xs-block() {
+            font-size: 16px;
+            line-height: 15px;
+        }
+
+        &:first-child {
+            flex: 0 0 140px;
+            text-align: left;
+
+            @include xs-block() {
+                flex: 1;
+                font-family: $f;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            &::after {
+                @include xs-block() {
+                    content: attr(data-title);
+                }
+            }
+
+            span {
+                @include xs-block() {
+                    display: none;
+                }
+            }
+        }
+
+        & + & {
+            @include xs-block() {
+                padding: 15px 0;
+            }
+        }
+    }
+}

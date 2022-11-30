@@ -1,0 +1,48 @@
+.faq {
+    position: relative;
+    margin-bottom: 70px;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 60px -15px 0;
+
+        @include xs-block() {
+            flex-direction: column;
+            margin: 60px 0 0;
+        }
+    }
+
+    &__item {
+        width: calc(1 / 4 * 100% - 30px);
+        margin: 0 15px;
+
+        @include xs-block() {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-family: $f-medium;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 15px;
+
+        @include xs-block() {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    &__desc {
+        opacity: 0.8;
+        font-family: $f;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 20px;
+    }
+}
+
+// .faq

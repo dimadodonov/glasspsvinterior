@@ -1,0 +1,42 @@
+@import 'helpers/all';
+@import 'generated/all';
+@import 'base/all';
+
+// Libs
+@import 'swiper/swiper-bundle';
+@import '_lib/fancybox';
+@import '_lib/wc';
+
+// Customization libs
+@import 'custom';
+
+// Import site components
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/buttons';
+@import 'components/input';
+
+// Import main styles
+@import 'main';
+
+// Import site layouts
+@import 'layout/badge';
+@import 'layout/cart';
+@import 'layout/category';
+@import 'layout/clients';
+@import 'layout/contacts';
+@import 'layout/edge';
+@import 'layout/faq';
+@import 'layout/footer';
+@import 'layout/form';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/payments';
+@import 'layout/popup';
+@import 'layout/product';
+@import 'layout/products';
+@import 'layout/section';
+@import 'layout/social';
+
+// Import pages
+@import 'pages/page';

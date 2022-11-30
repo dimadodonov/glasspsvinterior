@@ -1,0 +1,20 @@
+.posts,
+.payments {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 50px;
+
+    &__item {
+        width: auto;
+        height: 34px;
+
+        img {
+            width: auto;
+            height: 34px;
+        }
+
+        & + & {
+            margin-left: 27px;
+        }
+    }
+} // .payments
